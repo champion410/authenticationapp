@@ -1,0 +1,9 @@
+.container {
+  background-color: #d5eb87; /* Sky blue background */
+  min-height: 100vh; /* Make sure it covers the entire viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
