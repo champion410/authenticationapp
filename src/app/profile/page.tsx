@@ -50,7 +50,7 @@ export default function ProfilePage(){
         <button
           onClick={getUserDetails}
           className="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >Get User's Details</button>
+          >Get User&apos;s Details</button>
       </div>
     </div>
   )

@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import {useRouter} from "next/navigation";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import styles from './signup.module.css';
+// import styles from './signup.module.css';
 
 export default function SignupPage() {
     const router = useRouter();
@@ -39,8 +39,7 @@ export default function SignupPage() {
             setButtonDisabled(true);
         }
     }, [user]);
-
-
+    
     return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gradient-to-t from-pink-800 to-pink-300">
         <h1>{loading ? "Processing" : "Signup"}</h1>
