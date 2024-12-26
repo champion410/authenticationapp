@@ -16,7 +16,18 @@ export default function SignupPage() {
     const [buttonDisabled, setButtonDisabled] = React.useState(false);
     const [loading, setLoading] = React.useState(false);
 
+    const isValidEmail = (email: string) => {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      };
+
     const onSignup = async () => {
+        // e.preventDefault();
+        if(!isValidEmail(user.email)){
+          toast.error("Please enter a valide email address");
+          console.log("not good email")
+          return;
+        }
         try {
             setLoading(true);
             const response = await axios.post("/api/users/signup", user);
